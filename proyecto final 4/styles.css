@@ -1,0 +1,38 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+#medicamentos {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 columnas */
+    gap: 20px;
+    padding: 20px;
+    margin: 0 25%; /* Margen lateral del 25% */
+}
+
+.medicamento {
+    background-color: #4aa3df;
+    border: 2px solid #4aa3df;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.new-image {
+    width: 100%; /* Ajuste para que la imagen ocupe el 100% del contenedor */
+    height: auto;
+    aspect-ratio: 1; /* Relación de aspecto cuadrada */
+    object-fit: cover; /* Asegura que todas se ajusten igual */
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0;
+}

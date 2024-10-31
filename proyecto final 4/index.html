@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmacia Pyxis</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Farmacia Pyxis</h1>
+    <div id="medicamentos"></div>
+    <h2>Selecciona Método de Pago</h2>
+    <label>
+        <input type="radio" name="pago" value="credito"> Crédito
+    </label>
+    <label>
+        <input type="radio" name="pago" value="contado"> Contado
+    </label>
+    <h2>Dirección de Entrega</h2>
+    <input type="text" id="direccion" placeholder="Ingresa tu dirección">
+    <button id="finalizar">Finalizar Compra</button>
+
+    <script type="module">
+        import Medicamentos from './medicamentos.json';
+        (async () => {
+            const medicamentos = await Medicamentos.cargarMedicamentos('medicamentos.json');
+            renderizarMedicamentos(medicamentos);
+        })();
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
